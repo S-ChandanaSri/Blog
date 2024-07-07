@@ -52,7 +52,7 @@ export async function getStaticProps(context) {
     const { slug } = context.params;
 
 
-    let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
+    let myBlog = await fs.promises.readFile(`Blogdata/${slug}.json`, 'utf-8')
 
     return {
         props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props
